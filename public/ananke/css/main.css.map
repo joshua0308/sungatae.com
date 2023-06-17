@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "main.css",
-	"sourceRoot": "/Users/josh.kim/Projects/sungatae.com",
+	"sourceRoot": "/Users/josh.kim/Projects/blog",
 	"sources": [
 		"ananke/css/main.css"
 	],

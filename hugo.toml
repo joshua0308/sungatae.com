@@ -1,4 +1,4 @@
-baseURL = 'https://sungatae.com/'
+baseURL = 'https://joshua0308.github.io/blog/'
 languageCode = 'en-us'
-title = 'Sungatae'
+title = 'Sungtae Blog'
 theme = 'ananke'
