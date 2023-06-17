@@ -1,4 +1,4 @@
 baseURL = 'https://joshua0308.github.io/blog/'
 languageCode = 'en-us'
 title = 'Sungtae Blog'
-theme = 'ananke'
+theme = 'hugo-theme-minos'
