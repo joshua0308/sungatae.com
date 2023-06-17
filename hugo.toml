@@ -1,0 +1,4 @@
+baseURL = 'https://sungatae.com/'
+languageCode = 'en-us'
+title = 'Sungatae'
+theme = 'ananke'
