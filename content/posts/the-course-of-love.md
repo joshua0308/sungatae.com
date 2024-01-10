@@ -1,8 +1,10 @@
 ---
-title: "The Course of Love"
+title: "Book: The Course of Love"
 date: 2024-01-09T22:27:35-05:00
-draft: true
+draft: false
 ---
+
+[The Course of Love by Alain de Botton](https://www.alaindebotton.com/the-course-of-love)
 
 I was recommended this book in the summer of 2018 by a friend who I met in New York. Telling me that it is her favorite book, she lent me her copy while she was away for a couple of weeks. I started but never finished the book that summer. It didn't resonate with me for some reason. Maybe I was too preoccupied with the job hunt.
 
