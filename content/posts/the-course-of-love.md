@@ -12,7 +12,7 @@ Fast forward to 2021 summer in Montreal. I don't remember why but I pick up the 
 
 "I think with books, there’s really something around reader book fit and the particulars of that moment." - Patrick Collison on [Tim Ferriss Podcast](https://tim.blog/2018/12/24/the-tim-ferriss-show-patrick-collison/)
 
-## Notes
+## Quotes
 
 **Romanticism**
 
