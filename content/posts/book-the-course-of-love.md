@@ -18,8 +18,6 @@ Fast forward to 2021 summer in Montreal. I don't remember why but I pick up the 
 
 Love reaches a pitch at those moments when our beloved turns out to understand, more clearly than others have ever been able to, and perhaps even better than we do ourselves, the chaotic, embarrassing, and shameful parts of us. That someone else gets who we are and both sympathizes with us and forgives us for what they see underpins our whole capacity to trust and to give. Love is a dividend of gratitude for our lover’s insight into our own confused and troubled psyche.
 
-There is, in the early period of love, a measure of sheer relief at being able, at last, to reveal so much of what needed to be kept hidden for the sake of propriety.
-
 We call things a turn-on but what we might really be alluding to is delight at finally having been allowed to reveal our secret selves—and at discovering that, far from being horrified by who we are, our lovers have opted to respond with only encouragement and approval.
 
 In the past he has described certain women he has been out on dates with as “boring” when anyone else might more generously and accurately have labeled them “healthy.” Taking trauma to be a primary route to growth and depth, Rabih wants his own sadness to find an echo in his partner’s character.
