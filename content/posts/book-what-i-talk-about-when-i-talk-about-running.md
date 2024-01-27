@@ -1,6 +1,6 @@
 ---
 title: "Book: What I Talk About When I Talk About Running"
-date: 2024-01-27T14:27:24-05:00
+date: 2024-01-27
 draft: false
 ---
 

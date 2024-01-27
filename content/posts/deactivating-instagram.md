@@ -1,6 +1,6 @@
 ---
 title: "Deactivating Instagram"
-date: 2023-06-17T07:50:19-04:00
+date: 2023-06-17
 draft: false
 ---
 

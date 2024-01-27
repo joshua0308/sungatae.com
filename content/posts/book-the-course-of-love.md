@@ -1,6 +1,6 @@
 ---
 title: "Book: The Course of Love"
-date: 2024-01-09T22:27:35-05:00
+date: 2024-01-09
 draft: false
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Movie: Metropolitan"
-date: 2024-01-02T22:23:58-05:00
+date: 2024-01-02
 draft: false
 ---
 
