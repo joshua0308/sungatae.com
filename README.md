@@ -2,10 +2,13 @@
 
 # Getting Started
 
-Create new post
-`hugo new posts/my-first-post.md`
+If you cloned this project, you need to download the submodules.
+```
+git submodule init
+git submodule update
+```
 
-Run locally
+### Run locally
 ```
 hugo server
 
@@ -13,5 +16,10 @@ hugo server
 hugo server -D
 ```
 
-Build
+### Build
 `hugo`
+
+### Create new post
+`hugo new posts/my-first-post.md`
+
+
