@@ -2,3 +2,4 @@ baseURL = 'https://sungatae.com/'
 languageCode = 'en-us'
 title = 'sung·a·tae'
 theme = 'hugo-theme-minos'
+enableGitInfo = true
