@@ -2,6 +2,8 @@
 title: "Book: The Course of Love"
 date: 2024-01-09
 draft: false
+categories:
+- Books
 ---
 
 [The Course of Love by Alain de Botton](https://www.alaindebotton.com/the-course-of-love)

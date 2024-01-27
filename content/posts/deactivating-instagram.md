@@ -2,6 +2,8 @@
 title: "Deactivating Instagram"
 date: 2023-06-17
 draft: false
+categories:
+- Blog
 ---
 
 A couple weeks ago, I decided to deactivate Instagram because I found myself wasting too much time watching short-form videos (a.k.a. Reels) everyday.

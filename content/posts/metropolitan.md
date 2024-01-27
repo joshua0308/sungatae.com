@@ -2,6 +2,8 @@
 title: "Movie: Metropolitan"
 date: 2024-01-02
 draft: false
+categories:
+- Movies
 ---
 
 [Metropolitan by Whit Stillman](https://en.wikipedia.org/wiki/Metropolitan_(1990_film))

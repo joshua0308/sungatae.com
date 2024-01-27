@@ -2,6 +2,8 @@
 title: "Book: What I Talk About When I Talk About Running"
 date: 2024-01-27
 draft: false
+categories:
+- Books
 ---
 
 [What I Talk About When I Talk About Running by Haruki Murakami](https://www.harukimurakami.com/book/what-i-talk-about-when-i-talk-about-running-a-memoir)
