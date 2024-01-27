@@ -4,7 +4,7 @@ date: 2024-01-27T14:27:24-05:00
 draft: false
 ---
 
-[What I Talk About When I Talk About Running](https://www.harukimurakami.com/book/what-i-talk-about-when-i-talk-about-running-a-memoir)
+[What I Talk About When I Talk About Running by Haruki Murakami](https://www.harukimurakami.com/book/what-i-talk-about-when-i-talk-about-running-a-memoir)
 
 This was a book recommended by my good friend Jessie. I started running in the beginning of last year as a way to build up my stamina so I can get better at soccer. But running quickly grew on me and became a big part of my life. Over the summer, I trained with the [Runners Shop](https://www.therunnersshop.com/collections/run-club) and completed a [half marathon](https://raceroster.com/events/2023/65909/2023-tcs-toronto-waterfront-marathon) in October. I'm hoping to run a full marathon this year.
 
