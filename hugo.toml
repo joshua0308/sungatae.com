@@ -5,5 +5,5 @@ theme = 'hugo-theme-minos'
 enableGitInfo = true
 
 [services]
-  [services.disqus]
-    shortname = 'sungatae-com'
+    [services.disqus]
+        shortname = 'sungatae-com'
