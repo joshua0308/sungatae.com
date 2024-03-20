@@ -22,6 +22,11 @@ hugo server --navigateToChanged
 hugo
 ```
 
+### Run locally
+```
+hugo server
+```
+
 ### Deploy
 The blog is deployed to Github Pages. 
 
@@ -33,6 +38,3 @@ hugo new posts/my-first-post.md
 ### Customizing a theme
 
 > When you use a theme cloned from its git repository, do not edit the theme’s files directly. Instead, theme customization in Hugo is a matter of overriding the templates made available to you in a theme. This provides the added flexibility of tweaking a theme to meet your needs while staying current with a theme’s upstream.
-
-
-
