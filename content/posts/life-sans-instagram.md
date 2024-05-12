@@ -1,5 +1,5 @@
 ---
-title: "Life Sans Instagram"
+title: "Life Without Instagram"
 date: 2024-03-20T11:05:20-04:00
 draft: false
 categories:
