@@ -18,7 +18,7 @@ I asked my Church's elder for help who told me to read the Bible and pray. Aroun
 
 The search has been ongoing ever since, but at times, I have felt lost. I couldn't tell if my goals were my own or something that I assumed to satisfy the expectation of others. I've become a software engineer with the hopes of starting my own company one day, but do I really want to go down the entrepreneurial route? I decided not to go back to Korea, but do I really want to stay away from home? It's been a constant struggle to find the right balance between family and career - the two things that I consider important in my life.
 
-When I shared my story at church, a friend recommended this book to me. I enjoyed the read because it felt like the author had gone through a similar struggle. I could relate to his stories and was encouraged to learn how he overcame his sinkhole moment. It was a relief to know that many people go through this phase of self-discovery. Maybe it's just a quarter-life crisis. Having read the book, I feel like I am now better equipped to navigate, and furthermore, cultivate my private world.
+When I shared my story at church, a friend recommended this book to me. I enjoyed the read because it felt like the author had gone through a similar struggle. I could relate to his stories and was encouraged to learn how he overcame his sinkhole moment. It was a relief to know that many people go through this phase of self-discovery. Having read the book, I feel like I am now better equipped to navigate, and furthermore, cultivate my private world.
 
 ## Quotes
 
