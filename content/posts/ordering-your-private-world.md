@@ -10,7 +10,7 @@ categories:
 
 I grew up thinking that I could achieve anything I set my mind to. When I was a kid, I wanted to be good at soccer, so I practiced every day and eventually made the varsity team in high school. In college, I wanted to learn about the stock market, so I applied to the business program and got accepted. After college, I wanted to become a programmer, so I learned how to code and pivoted my career. When I had to leave the US, I did not want to go back to Korea, so I found a way to move to Canada.
 
-That isn't to say that everything was smooth sailing. I spent a lot of time on the bench in varsity soccer. I struggled to get internships in college. Many times, I found myself pulling my hair out while trying to debug a simple error. Yet, these were things that I could have improved had I put in more effort - or so I told myself. Everything seemed possible and within my control.
+That isn't to say that everything was smooth sailing. I spent a lot of time on the bench in varsity soccer. I struggled to get internships in college. Many times, I found myself pulling my hair out while trying to debug a simple error. Moving to Montreal, where I knew no one, during COVID was challenging, to say the least. Yet, these were things that I could have improved had I put in more effort - or so I told myself. Everything seemed possible and within my control.
 
 Then, in late 2022, something happened that struck me with such great force that it completely shattered my confidence that everything was under control. For 28 years, I had been living in an illusion, and suddenly, I had to confront the reality of my powerlessness. The more I tried to hold on, the more painful it became. It was time to let go.
 
