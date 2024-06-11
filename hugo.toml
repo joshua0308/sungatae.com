@@ -7,3 +7,13 @@ enableGitInfo = true
 [services]
     [services.disqus]
         shortname = 'sungatae-com'
+
+[menus]
+  [[menus.main]]
+    name = 'Posts'
+    pageRef = '/posts'
+    weight = 10
+  [[menus.main]]
+    name = 'Videos'
+    pageRef = '/videos'
+    weight = 20
