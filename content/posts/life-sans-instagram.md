@@ -3,7 +3,7 @@ title: "Life Without Instagram"
 date: 2024-03-20T11:05:20-04:00
 draft: false
 categories:
-- Blog
+- Life
 ---
 
 It's been almost 10 months since I deactivated Instagram. I stopped mainly because I did not like how much time I spent watching Reels. It was a huge time sink that did not benefit me in any way. I was inspired at the time by a friend who was able to keep an active, social life without Instagram so I decided to give it a try myself. I want to take this time to reflect on my life sans Instagram.

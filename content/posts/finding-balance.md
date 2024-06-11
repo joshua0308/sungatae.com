@@ -3,7 +3,7 @@ title: "중심 잡기"
 date: 2024-05-27T23:40:30-04:00
 draft: false
 categories:
-- Blog
+- Life
 ---
 
 살면서 길을 잃었던 경험이 있었나요? 어떻게 길을 다시 찾게 되었나요?

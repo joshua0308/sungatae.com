@@ -162,8 +162,7 @@ body {
 .logo-text {
   width: auto;
   color: #000;
-  font-size: 24px;
-  font-weight: 700;
+  font-size: 30px;
   line-height: 57px;
   margin-right: 25px;
   text-decoration: none;
@@ -451,7 +450,7 @@ a.article-title:hover,
   margin-bottom: 10px;
 }
 .article-title {
-  font-size: 2em;
+  font-size: 1.7em;
   font-weight: 500;
   line-height: 1em;
 }
