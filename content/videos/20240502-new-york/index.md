@@ -1,5 +1,5 @@
 ---
-title: "Video: New York Trip"
+title: "New York"
 date: 2024-06-11T10:52:26-07:00
 draft: false
 hidden: true
