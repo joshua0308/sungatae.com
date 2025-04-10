@@ -10,10 +10,14 @@ enableGitInfo = true
 
 [menus]
   [[menus.main]]
-    name = 'Posts'
+    name = 'posts'
     pageRef = '/posts'
     weight = 10
   [[menus.main]]
-    name = 'Videos'
+    name = 'videos'
     pageRef = '/videos'
     weight = 20
+  [[menus.main]]
+    name = 'ig'
+    url = 'https://ig.sungatae.com'
+    weight = 30
