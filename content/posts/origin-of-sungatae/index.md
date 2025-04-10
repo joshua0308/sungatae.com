@@ -1,5 +1,5 @@
 ---
-title: "The Origin of sung·a·tae"
+title: 'The Origin of "sungatae"'
 date: 2024-07-19T23:33:58-04:00
 draft: false
 categories:
