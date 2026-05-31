@@ -1,7 +1,7 @@
 ---
 title: "Practicing Interview with AI"
 date: 2026-03-01T04:02:00-05:00
-draft: false
+draft: true
 categories:
 - Tech
 ---
