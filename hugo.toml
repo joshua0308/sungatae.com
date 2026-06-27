@@ -18,6 +18,10 @@ enableGitInfo = true
     pageRef = '/videos'
     weight = 20
   [[menus.main]]
+    name = 'map'
+    pageRef = '/map'
+    weight = 30
+  [[menus.main]]
     name = 'ig'
     url = 'https://ig.sungatae.com'
-    weight = 30
+    weight = 40
