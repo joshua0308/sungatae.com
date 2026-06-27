@@ -28,7 +28,15 @@ hugo server
 ```
 
 ### Deploy
-The blog is deployed to Github Pages. 
+The blog is built with Hugo and deployed to GitHub Pages using the workflow in `.github/workflows/hugo.yaml`.
+
+The GitHub Action:
+- installs Hugo and Dart Sass
+- checks out the repo and submodules
+- builds the site into `public/`
+- deploys the generated site via `actions/deploy-pages@v4`
+
+DNS for `sungatae.com` is managed separately in AWS Route 53, while the repository deploys the site to GitHub Pages.
 
 ### Create new post
 ```
