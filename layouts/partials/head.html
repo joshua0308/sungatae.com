@@ -16,7 +16,8 @@
 
     <!-- override css with a custom css file -->
     <!-- <link rel="stylesheet" href="{{ "css/style.css" | absURL }}"> -->
-    <link rel="stylesheet" href="{{ "css/custom.css" | absURL }}">
+    {{ $styles := resources.FromString "css/custom.css" (readFile "static/css/custom.css") | fingerprint }}
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
     {{ if .HasShortcode "carousel" }}
     <link rel="stylesheet" href="{{ "css/carousel.css" | relURL }}">
     <script src="{{ "js/carousel.js" | relURL }}" defer></script>

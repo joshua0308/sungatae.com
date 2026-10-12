@@ -2,6 +2,7 @@
 title: "songs you know but harder"
 date: 2026-09-01T22:00:00-04:00
 draft: false
+hidden: true
 youtubeId: MOkjlUp8Q6w
 categories:
 - DJ

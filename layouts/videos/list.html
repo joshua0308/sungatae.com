@@ -1,0 +1,30 @@
+{{ partial "head.html" . }}
+<body>
+<div id="container">
+    {{ partial "header.html" . }}
+    <main id="main" class="outer">
+        <section class="archives-wrap">
+            <h1 class="archive-category-wrap">{{ .Title }}</h1>
+            <div class="video-grid">
+                {{ range (.Paginate .RegularPages.ByDate.Reverse).Pages }}
+                <article class="video-card">
+                    <a class="video-card-link" href="{{ .RelPermalink }}">
+                        <div class="video-thumbnail">
+                            {{ with .Params.youtubeId }}
+                            <img src="https://i.ytimg.com/vi/{{ . }}/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async">
+                            {{ end }}
+                            <span class="video-play" aria-hidden="true">&#9654;</span>
+                        </div>
+                        <h2 class="video-card-title">{{ .Title }}</h2>
+                    </a>
+                    <time class="video-card-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+                </article>
+                {{ end }}
+            </div>
+        </section>
+        {{ partial "pagination.html" . }}
+    </main>
+    {{ partial "footer.html" . }}
+</div>
+</body>
+</html>
