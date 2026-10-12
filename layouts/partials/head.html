@@ -17,6 +17,10 @@
     <!-- override css with a custom css file -->
     <!-- <link rel="stylesheet" href="{{ "css/style.css" | absURL }}"> -->
     <link rel="stylesheet" href="{{ "css/custom.css" | absURL }}">
+    {{ if .HasShortcode "carousel" }}
+    <link rel="stylesheet" href="{{ "css/carousel.css" | relURL }}">
+    <script src="{{ "js/carousel.js" | relURL }}" defer></script>
+    {{ end }}
     {{ range .Site.Params.customCss -}}
         <link rel="stylesheet" href="{{ . | absURL }}">
     {{- end }}

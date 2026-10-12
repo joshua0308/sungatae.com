@@ -1,0 +1,34 @@
+{{- $id := printf "carousel-%d" .Ordinal -}}
+{{- $images := slice -}}
+{{- with .Get "images" -}}
+  {{- range split . "," -}}
+    {{- $filename := trim . " \t\r\n" -}}
+    {{- $resource := $.Page.Resources.Get $filename -}}
+    {{- with $resource -}}
+      {{- $images = $images | append . -}}
+    {{- else -}}
+      {{- errorf "Carousel image %q was not found (%s)" $filename $.Position -}}
+    {{- end -}}
+  {{- end -}}
+{{- else -}}
+  {{- errorf "Carousel requires an images parameter (%s)" .Position -}}
+{{- end -}}
+{{- with $images -}}
+<section class="image-carousel" aria-label="{{ $.Get "label" | default "Image gallery" }}" aria-roledescription="carousel" data-carousel>
+  <div class="image-carousel-track" id="{{ $id }}" tabindex="0" aria-label="Images. Use the arrow keys or swipe to browse.">
+    {{- range $index, $image := . }}
+    {{- $title := replaceRE "[-_]" " " (path.BaseName $image.Name) | humanize -}}
+    <figure class="image-carousel-slide" role="group" aria-roledescription="slide" aria-label="{{ add $index 1 }} of {{ len $images }}">
+      <a href="{{ $image.RelPermalink }}" target="_blank" rel="noopener" aria-label="View {{ $title }} at full size (opens in a new tab)">
+        <img src="{{ $image.RelPermalink }}" alt="{{ $title }} diagram" width="{{ $image.Width }}" height="{{ $image.Height }}" loading="lazy" decoding="async">
+      </a>
+    </figure>
+    {{- end }}
+  </div>
+  <div class="image-carousel-controls" hidden>
+    <button type="button" data-direction="-1" aria-controls="{{ $id }}" aria-label="Previous image">&#8592; Previous</button>
+    <span class="image-carousel-status" aria-live="polite" aria-atomic="true">1 / {{ len $images }}</span>
+    <button type="button" data-direction="1" aria-controls="{{ $id }}" aria-label="Next image">Next &#8594;</button>
+  </div>
+</section>
+{{- end -}}
