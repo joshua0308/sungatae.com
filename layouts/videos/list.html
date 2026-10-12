@@ -6,7 +6,7 @@
         <section class="archives-wrap">
             <h1 class="archive-category-wrap">{{ .Title }}</h1>
             <div class="video-grid">
-                {{ range (.Paginate .RegularPages.ByDate.Reverse).Pages }}
+                {{ range (.Paginate .RegularPages.ByDate.Reverse 12).Pages }}
                 <article class="video-card">
                     <a class="video-card-link" href="{{ .RelPermalink }}">
                         <div class="video-thumbnail">

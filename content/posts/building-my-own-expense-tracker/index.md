@@ -8,7 +8,7 @@ categories:
 
 ![screenshots](images/budgies-cash-flow-chart-hover.png)
 
-I've been working on an expense tracking app called Budgies (named after a burrito restaurant in my neighborhood). The idea came from a conversation with my close friend and colleague Jamshid, who suggested that I track my expenses to better understand where my money was going and set a budget so I could feel less guilty about spending as long as I stayed within the budget.
+I've been working on an expense tracking app called Budgies (named after a burrito restaurant in my neighborhood). The idea came from a conversation with my close friend and colleague Jamshid, who suggested that I track my expenses to better understand where my money was going and set a budget so I could feel less guilty about spending as long as I stayed within budget.
 
 I started by downloading my bank and credit card statements and generating parsers to extract transactions from CSV/PDF files. The transactions are then saved to the database and displayed in the web app as charts and tables, allowing me to see both my overall spending trends and individual purchases.
 
