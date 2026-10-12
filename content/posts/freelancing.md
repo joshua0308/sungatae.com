@@ -2,6 +2,8 @@
 title: "Freelancing"
 date: 2026-05-17T14:33:37-04:00
 draft: false
+categories:
+- Tech
 ---
 
 As part of my 11 projects in 11 months initiative, I worked on a [freelance project](https://flinda.io) for the past couple of weeks. I initially declined because freelancing defeated the purpose of this initiative, which was to work on my own projects, but I ended up taking the project for a couple of reasons:

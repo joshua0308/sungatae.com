@@ -3,7 +3,7 @@
 <div id="container">
     {{ partial "header.html" . }}
     <section id="main" class="outer">
-        {{ $pages := where .Site.RegularPages "Section" "ne" "videos" }}
+        {{ $pages := where .Site.RegularPages "Section" "eq" "posts" }}
         {{ $pages = where $pages "Params.hidden" "ne" true }}
         {{ range (.Paginate $pages).Pages }}
         <article class="article article-type-post" itemscope itemprop="blogPost">
