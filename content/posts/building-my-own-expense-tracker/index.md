@@ -2,6 +2,8 @@
 title: "Building My Own Expense Tracker"
 date: 2026-10-12T00:24:59-07:00
 draft: false
+categories:
+- Tech
 ---
 
 ![screenshots](images/budgies-cash-flow-chart-hover.png)
