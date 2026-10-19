@@ -43,6 +43,33 @@ DNS for `sungatae.com` is managed separately in AWS Route 53, while the reposit
 hugo new posts/my-first-post.md
 ```
 
+### Add a video post
+
+Create `content/videos/YYYYMMDD-short-title/index.md`. For example, `content/videos/20261018-kpop-house-dj-mix/index.md`:
+
+```markdown
+---
+title: "kpop house dj mix (a20 lite, lisa, newjeans, tuide)"
+date: 2026-10-18T12:00:00-07:00
+draft: false
+youtubeId: HZWC4d5d_E0
+categories:
+- DJ
+---
+
+{{< youtube HZWC4d5d_E0 >}}
+```
+
+Use the video's title and the date you want shown on the site, including the timezone offset. Hugo excludes future-dated posts until that time, and the site needs to rebuild for them to appear. Set `draft: true` to keep an unfinished post unpublished.
+
+The YouTube ID is the part after `youtu.be/` or the `v=` parameter in a YouTube watch URL. For `https://youtu.be/HZWC4d5d_E0?si=...`, use only `HZWC4d5d_E0`. Put the same ID in both `youtubeId` (used for the thumbnail) and the `youtube` shortcode (used for the player). No thumbnail download is needed.
+
+Keep `DJ` for DJ sets, or change the category as appropriate. Add an optional description below the shortcode using Markdown.
+
+Preview with `hugo server` and open `/videos/` to check the thumbnail, title, and date. Open the post to check the embedded player. Video posts appear in the Videos grid, newest first; the homepage lists only posts from `content/posts/`.
+
+Run `hugo` to check the build, then commit and push through the normal GitHub Pages deployment workflow described above.
+
 ### Image carousel
 
 Use the `carousel` shortcode to show images one at a time inside a post. Put the images in the post's folder alongside its `index.md`:
