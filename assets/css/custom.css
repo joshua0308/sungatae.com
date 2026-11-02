@@ -1536,3 +1536,31 @@ a:focus-visible {
 .theme-toggle[hidden], .theme-icon-sun { display: none; }
 :root[data-theme="dark"] .theme-icon-sun { display: block; }
 :root[data-theme="dark"] .theme-icon-moon { display: none; }
+
+/* Fade the palette after the first paint, keeping initial loads flash-free. */
+@media (prefers-reduced-motion: no-preference) {
+  .theme-ready body,
+  .theme-ready #header,
+  .theme-ready .article,
+  .theme-ready .article-entry,
+  .theme-ready .article-entry code,
+  .theme-ready .article-entry hr,
+  .theme-ready .article-entry th,
+  .theme-ready .article-entry td,
+  .theme-ready .article-meta,
+  .theme-ready .article-meta *,
+  .theme-ready .article-category,
+  .theme-ready .article-nav-caption,
+  .theme-ready .archive-article-date,
+  .theme-ready .archives,
+  .theme-ready .archive-article-inner,
+  .theme-ready .project-status,
+  .theme-ready .video-card-date,
+  .theme-ready .video-card-thumbnail,
+  .theme-ready a,
+  .theme-ready button {
+    transition: background-color 300ms ease-out, color 300ms ease-out,
+                border-color 300ms ease-out, outline-color 300ms ease-out,
+                opacity 200ms ease;
+  }
+}
