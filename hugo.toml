@@ -26,6 +26,6 @@ enableGitInfo = true
     pageRef = '/map'
     weight = 30
   [[menus.main]]
-    name = 'ig'
+    name = 'photos'
     url = 'https://ig.sungatae.com'
-    weight = 40
+    weight = 18
