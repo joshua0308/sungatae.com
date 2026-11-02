@@ -14,6 +14,9 @@
     <link href="{{ "webfonts/ptserif/main.css" | absURL }}" rel='stylesheet' type='text/css'>
     <link href="{{ "webfonts/source-code-pro/main.css" | absURL }}" rel="stylesheet" type="text/css">
 
+    {{ $themeScript := resources.Get "js/theme.js" | fingerprint }}
+    <script src="{{ $themeScript.RelPermalink }}" integrity="{{ $themeScript.Data.Integrity }}"></script>
+
     {{ $styles := resources.Get "css/custom.css" | fingerprint }}
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
     {{ if .HasShortcode "carousel" }}

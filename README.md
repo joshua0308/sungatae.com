@@ -157,3 +157,7 @@ relatedPosts:
 ```
 
 These links appear after automatic project connections in the **Related posts** section, in the order listed. Duplicate links and links to the current page are omitted; hidden pages are excluded. Missing paths produce build warnings. Manual `relatedPosts` connections are one-way; `projects` connections link both ways.
+
+### Color theme
+
+The site follows the visitor's system light or dark preference by default. The navigation's light mode / dark mode button overrides it and remembers the choice in local storage. The shared palette is in `assets/css/custom.css`; `assets/js/theme.js` applies the preference before the stylesheet loads to avoid a flash. Without JavaScript, CSS still follows the system preference. Embedded maps and videos use their provider's appearance.
