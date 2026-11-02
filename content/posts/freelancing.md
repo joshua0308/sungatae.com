@@ -2,6 +2,8 @@
 title: "Freelancing"
 date: 2026-05-17T14:33:37-04:00
 draft: false
+projects:
+- flinda
 categories:
 - Tech
 ---

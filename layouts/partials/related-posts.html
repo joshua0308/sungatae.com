@@ -1,0 +1,65 @@
+{{- $page := . -}}
+{{- $pages := slice -}}
+{{- if eq $page.Section "posts" -}}
+    {{- range ($page.Params.projects | default slice | uniq) -}}
+        {{- $id := . -}}
+        {{- with $page.Site.GetPage (printf "/projects/%s" $id) -}}
+            {{- if and .IsPage (eq .Section "projects") -}}
+                {{- if not .Params.hidden -}}{{- $pages = $pages | append . -}}{{- end -}}
+            {{- else -}}
+                {{- warnf "Invalid project ID %q in %s" $id $page.Path -}}
+            {{- end -}}
+        {{- else -}}
+            {{- warnf "Unknown project ID %q in %s" $id $page.Path -}}
+        {{- end -}}
+    {{- end -}}
+{{- else if eq $page.Section "projects" -}}
+    {{- $posts := where $page.Site.RegularPages "Section" "posts" -}}
+    {{- $posts = where $posts "Params.projects" "intersect" (slice $page.File.ContentBaseName) -}}
+    {{- range (where $posts "Params.hidden" "ne" true).ByDate.Reverse -}}
+        {{- $pages = $pages | append . -}}
+    {{- end -}}
+{{- end -}}
+{{- range ($page.Params.relatedPosts | default slice) -}}
+    {{- $path := . -}}
+    {{- with $page.Site.GetPage $path -}}
+        {{- if and .IsPage (in (slice "posts" "projects") .Section) -}}
+            {{- if and (ne .RelPermalink $page.RelPermalink) (not .Params.hidden) -}}
+                {{- $pages = $pages | append . -}}
+            {{- end -}}
+        {{- else -}}
+            {{- warnf "Invalid related post %q in %s" $path $page.Path -}}
+        {{- end -}}
+    {{- else -}}
+        {{- warnf "Unknown related post %q in %s" $path $page.Path -}}
+    {{- end -}}
+{{- end -}}
+
+{{ with ($pages | uniq) }}
+<section class="archives-wrap related-posts" aria-labelledby="related-posts">
+    <h2 class="archive-category-wrap" id="related-posts">Related posts</h2>
+    <ul class="project-list" role="list">
+        {{ range . }}
+        <li class="project-list-item" data-project="{{ .File.ContentBaseName }}">
+            {{ if eq .Section "posts" }}<span class="archive-article-date"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006 Jan 2" }}</time></span>{{ end }}
+            <h3>
+                <a class="archive-article-title project-title-link" href="{{ .RelPermalink }}">
+                    {{ if eq .Section "projects" }}
+                    <span class="project-icon-slot" aria-hidden="true">
+                        {{ with .Resources.GetMatch "icon.*" }}
+                            {{ $icon := . }}
+                            {{ if ne .MediaType.SubType "svg" }}
+                                {{ if or (gt .Width 112) (gt .Height 112) }}{{ $icon = .Fit "56x56" }}{{ end }}
+                            {{ end }}
+                            <img class="project-icon" src="{{ $icon.RelPermalink }}" width="28" height="28" alt="" decoding="async">
+                        {{ end }}
+                    </span>
+                    {{ end }}
+                    <span>{{ .Title }}</span>
+                </a>
+            </h3>
+        </li>
+        {{ end }}
+    </ul>
+</section>
+{{ end }}

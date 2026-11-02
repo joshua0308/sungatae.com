@@ -3,8 +3,19 @@
         <div id="header-inner" class="inner">
             <a id="logo" class="logo-text" href="{{ .Site.Home.Permalink }}">{{ .Site.Title }}</a>
             <nav id="main-nav">
+                {{ $currentPage := . }}
                 {{ range .Site.Menus.main }}
-                <a class="main-nav-link" href="{{ .URL }}">{{ .Name }}</a>
+                {{ $current := "" }}
+                {{ with .Page }}
+                    {{ if eq . $currentPage }}
+                        {{ $current = "page" }}
+                    {{ else if and .IsHome (eq $currentPage.Section "posts") }}
+                        {{ $current = "location" }}
+                    {{ else if and (not .IsHome) (.IsAncestor $currentPage) }}
+                        {{ $current = "location" }}
+                    {{ end }}
+                {{ end }}
+                <a class="main-nav-link" href="{{ .URL }}"{{ with $current }} aria-current="{{ . }}"{{ end }}>{{ .Name }}</a>
                 {{ end }}
             </nav>
         </div>

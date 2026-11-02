@@ -2,6 +2,8 @@
 title: "I made a mobile app. Meet Billy!"
 date: 2025-04-09T22:15:02-04:00
 draft: false
+projects:
+- billy
 categories:
 - Tech
 ---
