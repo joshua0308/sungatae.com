@@ -27,6 +27,8 @@
   });
   document.addEventListener('DOMContentLoaded', () => {
     apply();
+    // Enable fades only after the saved theme has painted.
+    requestAnimationFrame(() => requestAnimationFrame(() => root.classList.add('theme-ready')));
     document.querySelector('.theme-toggle')?.addEventListener('click', () => {
       preference = root.dataset.theme === 'dark' ? 'light' : 'dark';
       try { localStorage.setItem(key, preference); } catch (_) {}
