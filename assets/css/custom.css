@@ -1564,3 +1564,12 @@ a:focus-visible {
                 opacity 200ms ease;
   }
 }
+
+/* Keep the blog navigation above the full-height photo archive. */
+.photos-page #container {
+  height: 100vh;
+  height: 100dvh;
+  min-height: 0;
+}
+#photos-main { flex: 1 1 auto; min-height: 0; }
+#photos-main iframe { display: block; width: 100%; height: 100%; border: 0; }

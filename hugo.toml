@@ -27,5 +27,5 @@ enableGitInfo = true
     weight = 30
   [[menus.main]]
     name = 'photos'
-    url = 'https://ig.sungatae.com'
+    pageRef = '/photos'
     weight = 18
