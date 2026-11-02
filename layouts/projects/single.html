@@ -1,0 +1,34 @@
+{{ partial "head.html" . }}
+<body>
+<div id="container">
+    {{ partial "header.html" . }}
+    <main id="main" class="outer">
+        <article class="article project-page">
+            <div class="article-inner">
+                <header class="article-header">
+                    <h1 class="article-title">{{ .Title }}</h1>
+                </header>
+                <div class="article-meta">
+                    <span class="project-status">{{ .Params.status }}</span>
+                    <span class="article-category"><a class="article-category-link" href="{{ "projects/" | relURL }}">All projects</a></span>
+                </div>
+                <div class="article-entry">
+                    {{ with .Description }}<p>{{ . }}</p>{{ end }}
+                    {{ with .Params.links }}<ul class="project-external-links">{{ range . }}<li><a href="{{ .url }}">{{ .label }}</a></li>{{ end }}</ul>{{ end }}
+                    {{ with .Params.screenshot }}<img src="{{ . | relURL }}" alt="{{ $.Params.screenshotAlt }}">{{ end }}
+                    {{ .Content }}
+                </div>
+                {{ if and (not .Params.notoc) (findRE `<a\s` .TableOfContents) }}
+                <aside class="article-toc" aria-label="Contents">
+                    <h3>{{ T "Contents" }}</h3>
+                    {{ .TableOfContents }}
+                </aside>
+                {{ end }}
+                {{ partial "related-posts.html" . }}
+            </div>
+        </article>
+    </main>
+    {{ partial "footer.html" . }}
+</div>
+</body>
+</html>

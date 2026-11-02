@@ -3,8 +3,7 @@
 <div id="container">
     {{ partial "header.html" . }}
     <main id="main" class="outer">
-        <section class="archives-wrap">
-            <h1 class="archive-category-wrap">{{ .Title }}</h1>
+        <section class="archives-wrap" aria-label="Videos">
             <div class="video-grid">
                 {{ range (.Paginate .RegularPages.ByDate.Reverse 12).Pages }}
                 <article class="video-card">

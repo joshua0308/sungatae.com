@@ -2,6 +2,8 @@
 title: "Instagram Archive (ig.sungatae.com)"
 date: 2024-11-27T00:27:56-05:00
 draft: false
+projects:
+- instagram-archive
 categories:
 - Life
 - Tech

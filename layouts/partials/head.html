@@ -14,9 +14,7 @@
     <link href="{{ "webfonts/ptserif/main.css" | absURL }}" rel='stylesheet' type='text/css'>
     <link href="{{ "webfonts/source-code-pro/main.css" | absURL }}" rel="stylesheet" type="text/css">
 
-    <!-- override css with a custom css file -->
-    <!-- <link rel="stylesheet" href="{{ "css/style.css" | absURL }}"> -->
-    {{ $styles := resources.FromString "css/custom.css" (readFile "static/css/custom.css") | fingerprint }}
+    {{ $styles := resources.Get "css/custom.css" | fingerprint }}
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
     {{ if .HasShortcode "carousel" }}
     <link rel="stylesheet" href="{{ "css/carousel.css" | relURL }}">

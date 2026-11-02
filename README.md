@@ -8,7 +8,7 @@ git submodule update
 
 ### Run locally
 ```
-hugo server
+hugo server --disableFastRender
 
 # include drafts
 hugo server -D
@@ -24,7 +24,7 @@ hugo
 
 ### Run locally
 ```
-hugo server
+hugo server --disableFastRender
 ```
 
 ### Deploy
@@ -104,3 +104,56 @@ The carousel uses a custom shortcode and plain CSS and JavaScript, with no addit
 ### Customizing a theme
 
 > When you use a theme cloned from its git repository, do not edit the theme’s files directly. Instead, theme customization in Hugo is a matter of overriding the templates made available to you in a theme. This provides the added flexibility of tweaking a theme to meet your needs while staying current with a theme’s upstream.
+
+### Add a project
+
+Create `content/projects/<project-id>/index.md`. The folder name is the stable project ID and becomes `/projects/<project-id>/`. Keep it unchanged when renaming a project's title.
+
+```yaml
+---
+title: "My project"
+description: "A short explanation of what it does."
+status: active
+weight: 10
+# Optional, site-relative image path:
+# screenshot: /projects/my-project/images/screenshot.png
+# screenshotAlt: "Describe what the screenshot shows"
+# links:
+#   - label: Try it
+#     url: https://example.com
+#   - label: Source
+#     url: https://github.com/example/project
+---
+```
+
+Status must be `active` or `archived`. The projects index shows active projects first and sorts by weight within each status, lowest first. Empty status groups are hidden.
+
+Write the project page using whichever sections have content: Why I built it, How it works, Architecture, How it evolved, Lessons learned, What's next, and Release notes. The table of contents comes from the headings. Keep release notes as dated headings, newest first. Don't backdate releases from blog publication dates.
+
+Project brand icons: add an `icon.svg`, `icon.png`, or `icon.webp` to the project's folder alongside `index.md`. The project list displays it at 28×28 pixels beside the name. Icons are decorative because the project name already labels the link. Projects without an icon show their name normally.
+
+The main stylesheet lives in `assets/css/custom.css`. Hugo fingerprints it so browsers load new styling after each change. Use full rendering locally so project icon additions update the index immediately.
+
+### Connect posts and projects
+
+Add a project's folder ID to a blog post's front matter:
+
+```yaml
+projects:
+  - budgies
+```
+
+This automatically adds the project to the post's **Related posts** section and the post to the project's **Related posts** section. Add multiple IDs to associate a post with multiple projects. Project pages list associated posts newest first. No reverse entry is needed.
+
+### Link additional related posts manually
+
+Add `relatedPosts` to any blog post or project page's front matter:
+
+```yaml
+relatedPosts:
+  - /posts/building-my-own-expense-tracker
+  - /posts/freelancing
+  - /projects/budgies
+```
+
+These links appear after automatic project connections in the **Related posts** section, in the order listed. Duplicate links and links to the current page are omitted; hidden pages are excluded. Missing paths produce build warnings. Manual `relatedPosts` connections are one-way; `projects` connections link both ways.

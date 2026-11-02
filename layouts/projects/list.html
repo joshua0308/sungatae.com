@@ -1,0 +1,50 @@
+{{ partial "head.html" . }}
+<body>
+<div id="container">
+    {{ partial "header.html" . }}
+    <main id="main" class="outer">
+        <section class="archives-wrap projects-index" aria-label="Projects">
+            <h1 class="visually-hidden">{{ .Title }}</h1>
+            <div class="article-entry">{{ .Content }}</div>
+            {{ range .RegularPages }}
+                {{ if not (in (slice "active" "archived") .Params.status) }}
+                    {{ errorf "Project %s must have status active or archived" .Path }}
+                {{ end }}
+            {{ end }}
+            {{ range slice "active" "archived" }}
+                {{ $status := . }}
+                {{ $projects := where $.RegularPages.ByWeight "Params.status" $status }}
+                {{ with $projects }}
+                <ul class="project-list" aria-label="{{ $status | title }} projects" role="list">
+                    {{ range . }}
+                    <li class="project-list-item" data-project="{{ .File.ContentBaseName }}">
+                        <header class="archive-article-header">
+                            <h2>
+                                <a class="archive-article-title project-title-link" href="{{ .RelPermalink }}">
+                                    <span class="project-icon-slot" aria-hidden="true">
+                                        {{ with .Resources.GetMatch "icon.*" }}
+                                            {{ $icon := . }}
+                                            {{ if ne .MediaType.SubType "svg" }}
+                                                {{ if or (gt .Width 112) (gt .Height 112) }}
+                                                    {{ $icon = .Fit "56x56" }}
+                                                {{ end }}
+                                            {{ end }}
+                                            <img class="project-icon" src="{{ $icon.RelPermalink }}" width="28" height="28" alt="" decoding="async">
+                                        {{ end }}
+                                    </span>
+                                    <span>{{ .Title }}</span>
+                                </a>
+                            </h2>
+                        </header>
+                        {{ with .Description }}<div class="article-entry"><p>{{ . }}</p></div>{{ end }}
+                    </li>
+                    {{ end }}
+                </ul>
+                {{ end }}
+            {{ end }}
+        </section>
+    </main>
+    {{ partial "footer.html" . }}
+</div>
+</body>
+</html>

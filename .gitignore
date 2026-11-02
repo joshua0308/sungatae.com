@@ -1,3 +1,7 @@
 public/
 .DS_Store
 .agent
+
+# Local browser evidence and Hugo build cache
+.playwright-cli/
+resources/_gen/
