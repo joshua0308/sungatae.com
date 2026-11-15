@@ -26,6 +26,10 @@ enableGitInfo = true
     pageRef = '/map'
     weight = 30
   [[menus.main]]
+    name = 'favorites'
+    pageRef = '/favorites'
+    weight = 35
+  [[menus.main]]
     name = 'photos'
     pageRef = '/photos'
     weight = 18
