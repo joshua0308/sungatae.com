@@ -38,7 +38,7 @@ Some of my favorites listed alphabetically.
 - The Coldest Winter - David Halberstam
 - The Glass Castle - Jeannette Walls
 - Into the Wild - Jon Krakauer
-- [The Perks of Being a Wallflower]({{< relref "/posts/the-perks-of-being-a-wallflower.md" >}}) - Stephen Chbosky
+- [The Perks of Being a Wallflower - Stephen Chbosky]({{< relref "/posts/the-perks-of-being-a-wallflower.md" >}})
 
 ## TV Shows
 
