@@ -17,6 +17,9 @@
     {{ $themeScript := resources.Get "js/theme.js" | fingerprint }}
     <script src="{{ $themeScript.RelPermalink }}" integrity="{{ $themeScript.Data.Integrity }}"></script>
 
+    {{ $mermaidScript := resources.Get "js/mermaid.js" | fingerprint }}
+    <script type="module" src="{{ $mermaidScript.RelPermalink }}" integrity="{{ $mermaidScript.Data.Integrity }}"></script>
+
     {{ $styles := resources.Get "css/custom.css" | fingerprint }}
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
     {{ if .HasShortcode "carousel" }}

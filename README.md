@@ -70,6 +70,20 @@ Preview with `hugo server` and open `/videos/` to check the thumbnail, title, an
 
 Run `hugo` to check the build, then commit and push through the normal GitHub Pages deployment workflow described above.
 
+### Mermaid diagrams
+
+Use a fenced `mermaid` code block in any post or project page:
+
+````markdown
+```mermaid
+flowchart LR
+    A[Write a post] --> B[Build with Hugo]
+    B --> C[Publish]
+```
+````
+
+No front matter flag or shortcode is needed. Diagrams follow the site's light and dark modes and scroll horizontally when needed. Mermaid 12.3.0 loads from jsDelivr only on pages with diagrams. If JavaScript is disabled or the library cannot load, the diagram source stays visible. Use Mermaid's `accTitle` and `accDescr` to describe diagrams for screen readers.
+
 ### Image carousel
 
 Use the `carousel` shortcode to show images one at a time inside a post. Put the images in the post's folder alongside its `index.md`:

@@ -850,9 +850,18 @@ a.article-title:hover,
   margin-top: 2px;
 }
 
+.article-toc #TableOfContents ul ul {
+  display: none;
+}
+
 .article-toc li a {
   color: var(--text);
   text-decoration: none;
+}
+
+.article-toc #TableOfContents a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .article-toc li a.active {
@@ -1020,6 +1029,18 @@ a.article-title:hover,
   background: none;
   text-shadow: none;
   padding: 0;
+}
+
+.article-entry pre.mermaid {
+  overflow-x: auto;
+  white-space: pre;
+  text-align: center;
+}
+
+.article-entry pre.mermaid svg {
+  display: block;
+  margin: 0 auto;
+  height: auto;
 }
 
 .article-entry pre .highlight {
@@ -1429,10 +1450,11 @@ a:focus-visible {
   padding: 0;
 }
 
-.project-list-item { margin: 0 0 12px; }
+.project-list-item {
+  margin: 0 0 12px;
+}
 .project-list-item:last-child { margin-bottom: 0; }
 .project-list + .project-list { margin-top: 12px; }
-.project-list-item .article-entry { margin-left: 40px; }
 
 /* Keep the footer at the viewport bottom when a page has little content. */
 #container {
@@ -1489,6 +1511,32 @@ a:focus-visible {
 .project-page .archive-article-inner { border: 0; margin-left: 0; padding-left: 0; }
 .project-page .archive-article-title { display: inline-block; padding-block: 6px; }
 .project-page .archive-article-date { margin-bottom: 0; }
+
+.project-sidebar .related-posts { margin: 24px 0 0 20px; }
+.project-sidebar .related-posts h2 { margin: 0 0 12px; font-size: 1em; font-weight: bold; }
+.project-sidebar .related-posts li { margin-left: 0; }
+.project-sidebar .related-posts h3 { margin: 0; font-weight: normal; }
+.project-sidebar .project-title-link { overflow-wrap: anywhere; }
+.project-sidebar .related-posts .project-title-link {
+  border-bottom: 0;
+}
+.project-sidebar .related-posts .project-title-link:hover {
+  text-decoration: underline dotted;
+  text-underline-offset: 3px;
+}
+
+@media screen and (max-width: 1399px) {
+  .project-sidebar {
+    display: block;
+    position: static;
+    width: auto;
+    max-height: none;
+    margin: 0;
+    padding: 0;
+  }
+  .project-sidebar .project-toc { display: none; }
+  .project-sidebar .related-posts { margin: 50px 0; }
+}
 
 #header-inner { overflow: visible; align-items: center; }
 #main-nav { display: flex; align-items: center; flex-wrap: wrap; margin-left: 0; }

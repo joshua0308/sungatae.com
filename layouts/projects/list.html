@@ -32,11 +32,10 @@
                                             <img class="project-icon" src="{{ $icon.RelPermalink }}" width="28" height="28" alt="" decoding="async">
                                         {{ end }}
                                     </span>
-                                    <span>{{ .Title }}</span>
+                                    <span>{{ .Title }}{{ with .Description }} - {{ . }}{{ end }}</span>
                                 </a>
                             </h2>
                         </header>
-                        {{ with .Description }}<div class="article-entry"><p>{{ . }}</p></div>{{ end }}
                     </li>
                     {{ end }}
                 </ul>
