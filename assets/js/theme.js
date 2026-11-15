@@ -2,6 +2,14 @@
   const root = document.documentElement;
   const system = window.matchMedia('(prefers-color-scheme: dark)');
   const key = 'sungatae-theme';
+  const syncPhotos = () => {
+    const frame = document.querySelector('#photos-main iframe');
+    frame?.contentWindow?.postMessage({ type: 'sungatae-theme', theme: root.dataset.theme }, 'https://ig.sungatae.com');
+  };
+  window.addEventListener('message', (event) => {
+    const frame = document.querySelector('#photos-main iframe');
+    if (event.origin === 'https://ig.sungatae.com' && event.source === frame?.contentWindow && event.data?.type === 'sungatae-theme-ready') syncPhotos();
+  });
   let preference = null;
   try { preference = localStorage.getItem(key); } catch (_) {}
   if (preference !== 'light' && preference !== 'dark') preference = null;
@@ -9,6 +17,7 @@
   const apply = () => {
     const theme = preference || (system.matches ? 'dark' : 'light');
     root.dataset.theme = theme;
+    syncPhotos();
     const button = document.querySelector('.theme-toggle');
     if (button) {
       button.hidden = false;
@@ -26,6 +35,7 @@
     apply();
   });
   document.addEventListener('DOMContentLoaded', () => {
+    document.querySelector('#photos-main iframe')?.addEventListener('load', syncPhotos);
     apply();
     // Enable fades only after the saved theme has painted.
     requestAnimationFrame(() => requestAnimationFrame(() => root.classList.add('theme-ready')));
