@@ -19,7 +19,7 @@ Some of my favorites listed alphabetically.
 - Mac Miller - Circles
 - NewJeans - New Jeans
 - Ninajirachi - I Love My Computer
-- offonoff - boy.
+- Offonoff - boy.
 - Superorganism - Superorganism
 - SZA - SOS
 
