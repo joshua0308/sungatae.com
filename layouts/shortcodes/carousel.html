@@ -1,5 +1,9 @@
 {{- $id := printf "carousel-%d" .Ordinal -}}
 {{- $images := slice -}}
+{{- $titles := slice -}}
+{{- with .Get "titles" -}}
+  {{- $titles = split . "|" -}}
+{{- end -}}
 {{- with .Get "images" -}}
   {{- range split . "," -}}
     {{- $filename := trim . " \t\r\n" -}}
@@ -18,9 +22,14 @@
   <div class="image-carousel-track" id="{{ $id }}" tabindex="0" aria-label="Images. Use the arrow keys or swipe to browse.">
     {{- range $index, $image := . }}
     {{- $title := replaceRE "[-_]" " " (path.BaseName $image.Name) | humanize -}}
+    {{- $alt := printf "%s diagram" $title -}}
+    {{- if lt $index (len $titles) -}}
+      {{- $title = index $titles $index -}}
+      {{- $alt = $title -}}
+    {{- end -}}
     <figure class="image-carousel-slide" role="group" aria-roledescription="slide" aria-label="{{ add $index 1 }} of {{ len $images }}">
       <a href="{{ $image.RelPermalink }}" target="_blank" rel="noopener" aria-label="View {{ $title }} at full size (opens in a new tab)">
-        <img src="{{ $image.RelPermalink }}" alt="{{ $title }} diagram" width="{{ $image.Width }}" height="{{ $image.Height }}" loading="lazy" decoding="async">
+        <img src="{{ $image.RelPermalink }}" alt="{{ $alt }}" width="{{ $image.Width }}" height="{{ $image.Height }}" loading="lazy" decoding="async">
       </a>
     </figure>
     {{- end }}

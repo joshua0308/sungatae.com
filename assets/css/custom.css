@@ -599,6 +599,22 @@ a.article-title:hover,
   margin-bottom: 1.4em;
 }
 
+.inline-diagram {
+  margin: 1.4em 0;
+  color: var(--text);
+}
+
+.inline-diagram svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.inline-diagram-compact {
+  max-width: 600px;
+  margin-inline: auto;
+}
+
 .article-entry img,
 .article-entry video {
   max-width: 100%;

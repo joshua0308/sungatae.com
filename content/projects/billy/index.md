@@ -7,20 +7,20 @@ weight: 20
 
 ![Billy app screenshots](images/billy-overview.png)
 
-## Project status
+## Project status: Active
 
-- [Available on iOS](https://apps.apple.com/ca/app/billy-split-bills-instantly/id6736915357)
-- 290 first-time downloads
-- 11 purchases from Canada, the US, Mexico, Egypt, and the Maldives
+- Released in April 2025 ([Available on iOS](https://apps.apple.com/ca/app/billy-split-bills-instantly/id6736915357))
+- 294 first-time downloads
+- 11 purchases from Canada, the US, Mexico, Egypt, and the Maldives (CAD $42)
 
-*As of Nov 14, 2026*
+*As of November 2026*
 
-## Problem
+## Why did I build it?
 
-Whenever a restaurant only accepts one bill for the whole table (which happens often at Asian restaurants), the person who pays has to figure out how much everyone owes. It's simple when you can split evenly, but a lot of times, it's more complicated than that. For example, it's not fair to ask non-drinkers to split evenly for the pitcher that they didn't have. Another problem is that I often forget who ordered what when I get home and have to confirm with people which adds another back and forth. This process can become tedious and I wanted an easy way to split the bill on the spot: take a picture of the receipt, assign who had what, and let the app calculate the breakdown. So that's what this app is about. In this page, I'll explain how I built the app, how it evolved over time, and challenges that I'm facing.
+When I lived in Toronto, there were many occassions where restaurants (mostly asian) would only accept one bill for the group and I had to figure out the split after coming back home. It was tedious and time consuming because I did not remember who had what and I had to also figure out how to split taxes and tips. I had wished there was an easier way to figure out how much each person owed. That's why I built Billy which is an app that scans your receipt and calculates the split for you right away. This page explains how I built the app in detail.
 
 ## Architecture
-First, let me explain to you how it's currently setup. Billy is a React Native app built with Expo and a serverless backend on AWS. I chose serverless primarily to keep costs low. I didn’t want to worry about keeping the app up when there were barely any users or have to shut it down because of the fixed costs. Textract costs me about a cent per receipt page. Lambda costs nothing because my usage is low enough to stay within the free tier. S3 and DynamoDB barely cost anything either. All in all, it costs me less than a dollar a month to keep Billy running. It’s mainly because I don’t have many users yet, but even with more users, the cost would stay very low.
+Billy is a React Native app built with Expo and a serverless backend on AWS. I chose serverless  to keep costs low. I had side projects before that I had to shut down because of inactivity and server costs. For Billy, I didn’t want to worry about keeping the app up even if there are no users. Textract costs me a cent per receipt scan. Lambda costs nothing because my usage is low enough to stay within the free tier. S3 and DynamoDB barely cost anything either. All in all, it costs me a dollar a month to keep Billy up.
 
 The backend uses:
 

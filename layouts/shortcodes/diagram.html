@@ -1,0 +1,10 @@
+{{- $image := .Page.Resources.Get (.Get "src") -}}
+{{- with $image -}}
+  {{- $svg := replace .Content "#1e1e1e" "currentColor" -}}
+  {{- $svg = replace $svg "#ffffff" "var(--background)" -}}
+<div class="inline-diagram{{ if eq ($.Get "size") "compact" }} inline-diagram-compact{{ end }}" role="img" aria-label="{{ $.Get "alt" }}">
+  {{ $svg | safeHTML }}
+</div>
+{{- else -}}
+  {{- errorf "Diagram %q was not found (%s)" (.Get "src") .Position -}}
+{{- end -}}
