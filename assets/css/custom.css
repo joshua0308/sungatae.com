@@ -1528,22 +1528,21 @@ a:focus-visible {
 .project-page .archive-article-title { display: inline-block; padding-block: 6px; }
 .project-page .archive-article-date { margin-bottom: 0; }
 
-.project-sidebar .related-posts { margin: 24px 0 0 20px; }
-.project-sidebar .related-posts h2 { margin: 0 0 12px; font-size: 1em; font-weight: bold; }
-.project-sidebar .related-posts li { margin-left: 0; }
-.project-sidebar .related-posts h3 { margin: 0; font-weight: normal; }
-.project-sidebar .project-title-link { overflow-wrap: anywhere; }
-.project-sidebar .related-posts .project-title-link {
+.project-page .related-posts { margin: 50px 0; }
+.project-page .related-posts h2 { margin: 0 0 12px; font-size: 1em; font-weight: bold; }
+.project-page .related-posts li { margin-left: 0; }
+.project-page .related-posts h3 { margin: 0; font-weight: normal; }
+.project-page .related-posts .project-title-link {
   border-bottom: 0;
 }
-.project-sidebar .related-posts .project-title-link:hover {
+.project-page .related-posts .project-title-link:hover {
   text-decoration: underline dotted;
   text-underline-offset: 3px;
 }
 
 @media screen and (max-width: 1399px) {
   .project-sidebar {
-    display: block;
+    display: none;
     position: static;
     width: auto;
     max-height: none;
@@ -1551,7 +1550,6 @@ a:focus-visible {
     padding: 0;
   }
   .project-sidebar .project-toc { display: none; }
-  .project-sidebar .related-posts { margin: 50px 0; }
 }
 
 #header-inner { overflow: visible; align-items: center; }

@@ -23,8 +23,10 @@
     {{ $styles := resources.Get "css/custom.css" | fingerprint }}
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
     {{ if .HasShortcode "carousel" }}
-    <link rel="stylesheet" href="{{ "css/carousel.css" | relURL }}">
-    <script src="{{ "js/carousel.js" | relURL }}" defer></script>
+    {{ $carouselStyles := resources.Get "css/carousel.css" | fingerprint }}
+    <link rel="stylesheet" href="{{ $carouselStyles.RelPermalink }}" integrity="{{ $carouselStyles.Data.Integrity }}">
+    {{ $carouselScript := resources.Get "js/carousel.js" | fingerprint }}
+    <script src="{{ $carouselScript.RelPermalink }}" integrity="{{ $carouselScript.Data.Integrity }}" defer></script>
     {{ end }}
     {{ range .Site.Params.customCss -}}
         <link rel="stylesheet" href="{{ . | absURL }}">

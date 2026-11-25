@@ -1,6 +1,6 @@
 ---
 title: "Billy"
-description: "Scan a receipt, assign items to friends, and split the bill"
+description: "Split bills by scanning your receipt"
 status: active
 weight: 20
 ---

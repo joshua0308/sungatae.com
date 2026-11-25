@@ -1,6 +1,6 @@
 ---
 title: "Budgies"
-description: ""
+description: "Expense tracker for myself"
 status: active
 weight: 10
 ---

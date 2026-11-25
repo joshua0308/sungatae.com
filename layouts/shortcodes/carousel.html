@@ -35,9 +35,14 @@
     {{- end }}
   </div>
   <div class="image-carousel-controls" hidden>
-    <button type="button" data-direction="-1" aria-controls="{{ $id }}" aria-label="Previous image">&#8592; Previous</button>
+    <button class="image-carousel-step" type="button" data-direction="-1" aria-controls="{{ $id }}" aria-label="Previous image"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 6-6 6 6 6"/></svg></button>
+    <div class="image-carousel-dots" aria-label="Choose an image">
+      {{ range $index, $image := $images }}
+      <button type="button" class="image-carousel-dot" data-slide="{{ $index }}" aria-controls="{{ $id }}" aria-label="Go to image {{ add $index 1 }}" aria-pressed="{{ if eq $index 0 }}true{{ else }}false{{ end }}"><span></span></button>
+      {{ end }}
+    </div>
     <span class="image-carousel-status" aria-live="polite" aria-atomic="true">1 / {{ len $images }}</span>
-    <button type="button" data-direction="1" aria-controls="{{ $id }}" aria-label="Next image">Next &#8594;</button>
+    <button class="image-carousel-step" type="button" data-direction="1" aria-controls="{{ $id }}" aria-label="Next image"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button>
   </div>
 </section>
 {{- end -}}
